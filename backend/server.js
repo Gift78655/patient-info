@@ -59,6 +59,11 @@ app.get('/api/patients', (req, res) => {
   });
 });
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the Patient Info API!');
+});
+
+
 // Route to fetch appointments by patient ID
 app.get('/api/appointments/:patient_id', (req, res) => {
   const patientId = req.params.patient_id;
