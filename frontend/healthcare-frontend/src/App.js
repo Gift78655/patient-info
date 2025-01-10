@@ -3,8 +3,6 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
-
-
 const App = () => {
   const [patientId, setPatientId] = useState("");
   const [patientData, setPatientData] = useState(null);
@@ -22,7 +20,7 @@ const App = () => {
     setPatientData(null);
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/patient/${patientId}`
+        `https://patient-info-1.onrender.com/api/patient/${patientId}` // Updated with live backend URL
       );
       setPatientData(response.data);
     } catch (err) {
